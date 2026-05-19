@@ -233,6 +233,7 @@ a {
 .story-grid h2,
 .section-heading h2,
 .now-header h2,
+.with-us-copy h2,
 .collab-box h2,
 .footer-top h2 {
   font-size: clamp(1.9rem, 5vw, 4.2rem);
@@ -368,6 +369,69 @@ a {
 .project-card p:last-child {
   color: var(--gray-light);
   max-width: 520px;
+}
+
+/* BUILD WITH US */
+.with-us-section {
+  background: var(--white);
+  position: relative;
+}
+
+.with-us-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 38px;
+}
+
+.with-us-copy {
+  max-width: 760px;
+}
+
+.with-us-copy p:not(.section-label) {
+  color: var(--gray);
+  font-size: 1.04rem;
+  margin-top: 20px;
+}
+
+.with-us-cta {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(229, 57, 53, 0.18),
+      transparent 34%
+    ),
+    var(--white-soft);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: clamp(28px, 5vw, 56px);
+  align-self: start;
+}
+
+.with-us-cta p {
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.with-us-cta h3 {
+  font-size: clamp(1.45rem, 4vw, 2.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  margin-bottom: 28px;
+}
+
+.with-us-cta .button {
+  background: var(--black);
+  color: var(--white);
+}
+
+.with-us-cta .button:hover {
+  background: var(--red);
 }
 
 /* COLLAB SECTION */
@@ -547,6 +611,11 @@ a {
   .build-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 0 38px;
+  }
+  .with-us-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
   }
 }
 
